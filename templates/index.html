@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Solver & Grapher</title>
+    <style>
+        body {
+            height: 90vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        input[type="text"] {
+            width: 400px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        img {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧠 Math Solver & Grapher</h1>
+    <form method="post">
+        <input type="text" name="question" value="{{ question }}" placeholder="e.g., Solve 2*x+3=7 or Plot y=2*x+1">
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+
+    {% if graph %}
+        <img src="{{ url_for('graph') }}" alt="Graph">
+    {% endif %}
+</body>
+</html>
