@@ -29,7 +29,7 @@ Visualize math functions and their properties
 Educational tool for teachers and students
 Extendable as an online calculator app
 
-#Install this library using.
+# Install this library using.
 pip install flask, matplotlib, numpy, sympy, io
 
 
